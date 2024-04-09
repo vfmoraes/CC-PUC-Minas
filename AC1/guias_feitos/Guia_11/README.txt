@@ -1,0 +1,1 @@
+Realizei todos os exercícios utilizando o Verilog, porém tive muita dificuldade em implementar no Logisim com os circuitos. O Mealy_1101.png é uma tentativa do primeiro exercício, mas possui falhas. Não consegui converter código Verilog em circuitos e por isso só realizei as questões em Verilog.

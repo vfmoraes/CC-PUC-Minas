@@ -1,0 +1,26 @@
+// Guia_1605.txt
+// 802371 - Victor Ferraz de Moraes
+//
+
+LDA 2050H
+MOV B, A
+ANI 0Fh
+MOV C, A
+MOV A, B
+ANI F0h
+RRC
+RRC
+RRC
+RRC
+MOV D, A 
+MVI E, 0Ah
+MVI A, 00
+LOOP1: ADD D
+DCR E
+JNZ LOOP1
+MVI E, 0Ah
+LOOP2: ADD C
+DCR E
+JNZ LOOP2
+STA 2052H
+HLT

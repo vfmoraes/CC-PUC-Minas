@@ -1,0 +1,16 @@
+Nome: Victor Ferraz de Moraes
+Matrícula: 802371
+
+3.) Segundo os textos recomendados, definir e caracterizar
+
+ASIC (Application Specific Integrated Circuit): ASICs são circuitos integrados personalizados para um uso específico, em vez de serem projetados para propósitos gerais. Eles têm o melhor desempenho em comparação aos próximos listados, mas também têm o maior custo inicial.
+
+ASSP (Application Specific Standard Product): ASSPs são semicondutores que incorporam funções específicas para aplicações específicas, mas são disponibilizados para muitos clientes diferentes. Eles são menos flexíveis do que os ASICs, mas são mais baratos e mais rápidos para implementar.
+
+SPLD (Simple Programmable Logic Device): SPLDs são dispositivos de lógica programável que são mais simples e menores do que CPLDs e FPGAs. Eles são usados para aplicações de menor escala onde a flexibilidade e a reprogramabilidade são importantes.
+
+CPLD (Complex Programmable Logic Device): CPLDs são dispositivos de lógica programável que são mais complexos do que SPLDs. Eles são usados para aplicações de maior escala e podem implementar funções lógicas mais complexas. Os CPLDs são mais eficientes em termos de energia, mais baratos e têm menor desempenho em comparação aos FPGAs.
+
+SOC (System on a Chip): SOCs integram todos os componentes de um computador ou outro sistema em um único chip. Eles podem incluir um microprocessador, memória, periféricos de entrada/saída e outros componentes. Os SOCs são usados em uma variedade de aplicações, desde dispositivos móveis até sistemas embarcados.
+
+FPGA (Field Programmable Gate Array): FPGAs são dispositivos de lógica programável que são ainda mais complexos do que CPLDs. Eles são altamente flexíveis e podem ser reprogramados para implementar quase qualquer função lógica. Os FPGAs têm um desempenho muito bom e são totalmente digitais, mas são mais caros do que os CPLDs.

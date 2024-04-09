@@ -1,0 +1,13 @@
+// Guia_1607.txt
+// 802371 - Victor Ferraz de Moraes
+//
+
+LDA 2050H
+MOV B, A
+MVI A, 01
+LOOP: MUL B
+MOV A, L
+DCR B
+JNZ LOOP
+STA 2052H
+HLT

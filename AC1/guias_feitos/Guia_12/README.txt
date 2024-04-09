@@ -1,0 +1,1 @@
+- Adicionados circuitos que não entregues do Guia 11. O nome dos arquivos estão como Guia_110X.circ

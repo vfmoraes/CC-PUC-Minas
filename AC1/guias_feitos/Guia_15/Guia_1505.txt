@@ -1,0 +1,25 @@
+// Guia_1505.txt
+// 802371 - Victor Ferraz de Moraes
+
+# ORG 2000H
+# BEGIN 2000H
+
+LXI H,dado1
+MOV A,M
+DAD H
+STA temp
+LXI H,dado2
+MOV A,M
+RRC
+MOV B, A
+LXI H,temp
+MOV A,M
+ADD B
+STA dado3
+HLT
+
+# ORG 2501H
+# DB 0AH, 05H
+
+# ORG 2504H
+# DB 00H

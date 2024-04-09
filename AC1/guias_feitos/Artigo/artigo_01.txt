@@ -1,0 +1,12 @@
+Nome: Victor Ferraz de Moraes
+Matrícula: 802371
+
+1.) Ler os artigos recomendados:
+https://docplayer.com.br/3878086-O-cpld-dispositivo-complexo-de-logica-programacao-aplicado-em-automacao-industrial-resumo.html
+https://edisciplinas.usp.br/pluginfile.php/530826/mod_resource/content/1/DISPOSITIVOS%20LÓGICOS%20PROGRAMÁVEIS_2014.pdf
+
+
+e, pelo menos, relacionar mais outro artigo, a sua escolha, sobre o mesmo tema.
+
+Artigo Escolhido:
+https://www.nucleodoconhecimento.com.br/engenharia-eletrica/utilizacao-do-clp-para-realizacao-de-controle-automatico-em-processos-industriais

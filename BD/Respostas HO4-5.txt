@@ -1,0 +1,203 @@
+HO4
+1.
+Resposta enviada:
+
+π first_name,last_name (σ gender = 'F' (actors))
+
+Reposta otimizada:
+
+A = σ gender = 'F' (actors)
+π first_name, last_name (A)
+
+2. 
+Reposta enviada:
+
+π name (σ year > 1999 (movies))
+
+Reposta otimizada:
+
+A = σ year > 1999 (movies)
+π name (A)
+
+3.
+Reposta enviada:
+
+π name, first_name, last_name ((movies_directors ⨝ (movies_directors.director_id = directors.id) directors) ⨝ (movies_directors.movie_id = movies.id) movies)
+
+Reposta otimizada:
+
+A = movies ⨝ movies.id = movies_directors.movie_id movies_directors
+B = A ⨝ movies_directors.director_id = directors.id directors
+π name, first_name, last_name (B)
+
+4.
+Resposta enviada:
+
+A = (roles) ⨝ roles.actor_id = actors.id (actors)
+B = (movies) ⨝ movie_id = roles.movie_id (A)
+π movies.name, actors.first_name, actors.last_name, roles.role, movies.rank( σ movies.rank > 6 (B))
+
+Resposta otimizada:
+
+A = σ movies.rank > 6 (movies)
+B = A ⨝ movies.id=roles.movie_id roles
+C = B ⨝ roles.actor_id=actors.id actors
+π movies.name, actors.first_name, actors.last_name, roles.role (C)
+
+5.
+Resposta enviada:
+
+π directors.first_name,    directors.last_name, movie_count ((γ director_id; count(movie_id) -> movie_count(movies_directors)) ⨝ movies_directors.director_id = id directors)
+
+Resposta otimizada:
+
+A = γ director_id;count(movie_id) -> movie_id (movies_directors)
+B = A ⨝ director_id = id (directors)
+C = ρ n_movies ← movie_id (B)
+πfirst_name,last_name,n_movies (C)
+
+6.
+Resposta enviada:
+
+π genre, n_movies(ρ n_movies ← movie_id (γ genre;count(movies_genres.movie_id) -> movie_id (movies_genres)))
+
+Resposta otimizada:
+
+A = γ genre;count(movies_genres.movie_id) -> movie_id (movies_genres)
+B = ρ n_movies ← movie_id (A)
+π genre, n_movies (B)
+
+7.
+Resposta enviada:
+
+genre_per_movie = movies ⨝ id = movie_id (movies_genres)( γ genre; avg(rank) -> media_rank(genre_per_movie)) ⨝ ( γ genre; max(rank) -> max_rank(genre_per_movie))
+⨝ (γ genre; min(rank) -> min_rank(genre_per_movie))
+
+Resposta otimizada:
+
+A = (movies_genres) ⨝ movie_id=id (movies)
+rank_medio = γ genre;avg(rank)-> rank_medio (A)
+rank_max = γ genre;max(rank)-> rank_maximo (A)
+rank_min = γ genre;min(rank)-> rank_minimo (A)
+B = rank_medio ⨝ rank_max ⨝ rank_min
+π genre, rank_medio, rank_min, rank_max (B)
+
+HO5
+1.
+Resposta enviada:
+
+A = actors ⨝ actors.first_name = directors.first_name ∧ actors.last_name = directors.last_name directors
+π actors.first_name, actors.last_name (A)
+
+Resposta otimizada:
+
+-- Renomeando os atributos de diretores e atribuindo a variavel D0
+D0 = ρid ← directors.id, first_name ← directors.first_name, last_name ← directors.last_name (directors)
+
+-- Projetando apenas o primeiro nome e o ultimo nome de diretores em D0 e atribuindo para D1
+D1 = πfirst_name, last_name (D0)
+
+-- Renomeando os atributos de atores e atribuindo a variavel A0
+A0 = ρid ← actors.id, first_name ← actors.first_name, last_name ← actors.last_name (actors)
+
+-- Projetando apenas o primeiro nome e o ultimo nome de atores em A0 e atribuindo para A1
+A1 = πfirst_name, last_name (A0)
+
+-- Realizando a intersecao de atores com diretores
+I = A1 ∩ D1
+
+-- Projetando primeiro nome e ultimo nome dos atores que sao diretores em I
+π first_name,last_name (I)
+
+2.
+Resposta enviada:
+
+A = actors ▷ directors.first_name = actors.first_name ∧ directors.last_name = actors.last_name directors
+π actors.first_name, actors.last_name (A)
+
+Resposta otimizada:
+
+-- Renomeando os atributos de diretores e atribuindo a variavel D0
+D0 = ρid ← directors.id, first_name ← directors.first_name, last_name ← directors.last_name (directors)
+
+-- Projetando apenas o primeiro nome e o ultimo nome de diretores em D0 e atribuindo para D1
+D1 = πfirst_name, last_name (D0)
+
+-- Renomeando os atributos de atores e atribuindo a variavel A0
+A0 = ρid ← actors.id, first_name ← actors.first_name, last_name ← actors.last_name (actors)
+
+-- Projetando apenas o primeiro nome e o ultimo nome de atores em A0 e atribuindo para A1
+A1 = πfirst_name, last_name (A0)
+
+-- Realizando a subtracao dos atores (A1) por diretores (D1)
+S = A1 - D1
+
+-- Projetando o primeiro nome e o ultimo nome dos atores que nao sao diretores (S)
+π first_name, last_name (S)
+
+3.
+Resposta enviada:
+
+π actors.first_name, actors.last_name actors ∪ π directors.first_name, directors.last_name directors
+
+Resposta otimizada:
+
+-- Renomeando os atributos de diretores e atribuindo a variavel D0
+D0 = ρid ← directors.id, first_name ← directors.first_name, last_name ← directors.last_name (directors)
+
+-- Projetando apenas o primeiro nome e o ultimo nome de diretores em D0 e atribuindo para D1
+D1 = πfirst_name, last_name (D0)
+
+-- Renomeando os atributos de atores e atribuindo a variavel A0
+A0 = ρid ← actors.id, first_name ← actors.first_name, last_name ← actors.last_name (actors)
+
+-- Projetando apenas o primeiro nome e o ultimo nome de atores em A0 e atribuindo para A1
+A1 = πfirst_name, last_name (A0)
+
+-- Unificando diretores (D1) com atores (A1)
+U = A1 ∪ D1
+
+-- Projetando primeiro nome e ultimo nome de atores e diretores em U
+π first_name, last_name (U)
+
+4.
+Resposta enviada:
+
+A = directors ⨝ directors.id = movies_directors.director_id movies_directors
+B = movies ⨝ movies.id = movies_directors.movie_id A
+π  movies.name, directors.first_name, directors.last_name (σ directors.first_name = '' B) 
+
+Resposta otimizada:
+
+-- Realizando a juncao de filmes com diretores e atribuindo a variavel FD0
+FD0 = (movies) ⨝ movies.id=movies_directors.movie_id  (movies_directors) ⨝ movies_directors.director_id=directors.id (directors)
+
+-- Projetando apenas os nomes, ids, ano e rank dos filmes (de FD0) e atribuindo a FD1
+FD1 = π movies.id, movies.name, movies.year, movies.rank (FD0)
+
+-- Realizando a subtracao dos filmes (movies) pelos filmes com diretores (FD1)
+S = movies - FD1
+
+-- Projetando o nome dos filmes
+π name (S)
+
+5.
+Resposta enviada e otimizada:
+
+Filmes_Atores = (movies) ⨝ movies.id=roles.movie_id (roles) ⨝ actor_id=actors.id (actors)
+Filmes_Atores_Qtd = γ actors.id, actors.first_name, actors.last_name;count(movie_id) -> q_filmes (Filmes_Atores)
+Filmes_Atores_Qtd2 = σ q_filmes < 2 (Filmes_Atores_Qtd)
+S = Filmes_Atores_Qtd - Filmes_Atores_Qtd2
+π first_name,last_name (S)
+
+6.
+Resposta enviada. Não otimizada devido a questão imcompleta
+
+Filmes_Atores = (movies) ⨝ movies.id=roles.movie_id (roles) ⨝ roles.actor_id=actors.id (actors)
+Filmes_Atores_Qtd = γ movies.id;count(roles.actor_id) -> q_atores (Filmes_Atores)
+Filmes_Atores_QtdM2 = σ q_atores < 2 (Filmes_Atores_Qtd)
+B= ρ filmesid ← movies.id Filmes_Atores_QtdM2
+Filmes_Atores_QtdM2_Generos = (B) ⨝ movies.filmesid=movies_genres.movie_id (movies_genres)
+J = movies ⨝ movies.id = movies.filmesid Filmes_Atores_QtdM2_Generos
+K = γ movies.year;count(movies_genres.genre) -> media_filmesM2 (J)
+π movies.year, media_filmesM2 K

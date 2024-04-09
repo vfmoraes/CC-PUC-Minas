@@ -1,0 +1,103 @@
+header {
+  height: 80px;
+  background: url(Ferraz-logo.png) no-repeat;
+  background-size: 250px;
+  border-bottom: solid 1px lightgrey;
+}
+
+main {
+  width: 70%;
+  float: left;
+  background-color: lightgoldenrodyellow;
+}
+
+aside {
+  width: 30%;
+  float: left;
+  background-color: lightgrey;
+}
+
+/* Componente Caixa Menu Principal*/
+.menu-cabecalho {
+  right: 0px;
+  float: right;
+  margin: 10px;
+}
+
+.menu-cabecalho ul{
+  list-style-type: none;
+}
+
+.menu-cabecalho ul li{
+  display: inline-block;
+}
+
+.menu-cabecalho ul li a{
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  background-color: lightblue;
+}
+
+.menu-cabecalho ul li a:hover{
+  background-color: black;
+  color: white;
+}
+
+/* Componente Caixa Post */
+.caixa-post{
+  padding: 10px 10px;
+  clear: both;
+}
+
+.caixa-post img{
+  display: block;
+  float: left;
+  margin-right: 10px;
+  width: 70px;
+}
+
+.caixa-post h4{
+  color: darkred;
+  font-size: 60%;
+  margin-bottom: 10px;
+}
+
+.caixa-post p.texto{
+  font-size: 80%;
+}
+
+.caixa-post span:nth-child(3){
+  background-color: lightblue;
+  color: white;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+/* Componente Caixa Pesquisa */
+.caixa-pesquisa{
+  margin: 20px;
+  margin-bottom: 30px;
+}
+
+.caixa-pesquisa h3{
+  margin-bottom: 10px;
+}
+
+/* Componente Caixa Categoria */
+.menu-categorias{
+  margin: 20px;
+}
+
+.menu-categorias h3{
+  margin-bottom: 10px;
+}
+
+.menu-categorias ul{
+  list-style: none;
+}
+
+.menu-categorias a{
+  text-decoration: none;
+}

@@ -1,0 +1,24 @@
+Nome: Victor Ferraz de Moraes
+Matrícula: 802371
+
+5.) Diferenciar:
+
+CPLD
+
+É um dispositivo de lógica programável que é mais simples e contém menos interconexões quando comparado ao FPGA. Ele é baseado em EEPROM e é mais adequado para projetos de contagem de portas menores.
+
+Flexibilidade: Menos flexível em comparação com o FPGA, pois tem uma arquitetura mais simples e menos interconexões.
+
+Custo: Geralmente menos caro do que o FPGA.
+
+Complexidade: Menos complexo em comparação com o FPGA, ideal para projetos de contagem de portas menores.
+
+FPGA
+
+É um dispositivo de lógica programável mais complexo e com maior capacidade de lógica, o que o torna ideal para projetos de contagem de portas maiores. Ele é baseado em RAM e tem uma arquitetura que permite uma alta capacidade lógica.
+
+Flexibilidade: Mais flexível devido à sua arquitetura complexa e maior quantidade de blocos lógicos, que permitem implementar funções lógicas mais complexas.
+
+Custo: Geralmente mais caro do que o CPLD.
+
+Complexidade: Mais complexo, ideal para projetos de contagem de portas maiores e aplicações mais complexas.

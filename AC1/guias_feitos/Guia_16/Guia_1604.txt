@@ -1,0 +1,21 @@
+// Guia_1604.txt
+// 802371 - Victor Ferraz de Moraes
+//
+
+MVI B, 05H
+LXI H, 3000H
+MOV C, B
+OUTER_LOOP: MOV D, C
+            MOV E, B
+INNER_LOOP: MOV A, M 
+            INX H
+            CMP M
+            JNC NO_SWAP
+            MOV A, M
+            MOV M, D
+            MOV D, A
+NO_SWAP:    DCR E
+            JNZ INNER_LOOP
+            DCR C
+            JNZ OUTER_LOOP
+HLT

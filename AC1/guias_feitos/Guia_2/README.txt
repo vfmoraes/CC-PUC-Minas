@@ -1,0 +1,1 @@
+Infelizmente não consegui realizar o programa em Verilog da questão 4, pois tive muita dificuldade para realizar as conversões dentro do código. Espero que possa entender, obrigado.

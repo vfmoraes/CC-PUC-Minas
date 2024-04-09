@@ -1,0 +1,88 @@
+
+	QUESTIONAMENTO: Analisar como as taxas de desigualdade ao acesso à educação se relacionam com a 
+cor e o gênero do indivíduo
+
+	
+	TRATAMENTO: Arredondamento de dados esperados inteiros para facilidade nos cálculos, ajuste de 
+casas decimais de alguns indices, filtro dos atributos para a análise propriamente dita.
+
+	DICIONÁRIO DE DADOS:
+
+		cod_mun: Código do município, definido pelo IBGE.
+		
+		nom_mun: Nome do município.
+		
+		cod_regiao: Código da Grande Região, variando de 1 a 5, sendo  em ordem, Norte, Nordeste
+	Sudeste, Sul, Centro Oeste
+		
+		
+		cod_uf: Código da Unidade da Federação, composto por dois algarismos, o primeiro sendo
+	relacionado ao codigo da regiao e o segundo referente ao estado.
+
+		qtd_dom: Número de domicílios.
+
+		qtd_dom_pob_vul: Número de domicílios pobres ou vulneráveis.
+
+		qtd_pes: Número de pessoas.
+
+		qtd_pes_pob_vul: Número de pessoas pobres ou vulneráveis.
+
+		qtd_0a11: Número de crianças de com idade de 0 a 11 anos.
+
+		qtd_0a11_pob_vul: Número de crianças de 0 a 11 anos pobres ou vulneráveis.
+
+		incidencia: Incidência da pobreza, que indica porcentualmente, a proporção de pessoas com
+	renda abaixo da linha da pobreza.
+
+		intensidade: Intensidade da pobreza.
+
+		IPM: Índice de Pobreza Multidimensional, com utilidade para mensurar, porcentualmente
+	o nivel de pobreza dados vários âmbitos, como saude, saneamento, educação, etc.
+
+		qtd_dom_E1: Número de domicílios privados no indicador E1, indicador esse que refere-se caso há
+	pelo menos uma pessoa entre 6 e 17 anos que não frequenta a escola.
+
+		qtd_pes_E1: Número de pessoas no indicador E1, indicador esse referente a quantidade de
+	pessoas entre 6 e 17 anos que não frequenta a escola.
+
+		qtd_dom_E2: Número de domicílios privados no indicador E2, indicador esse que refere-se a
+	pelo menos uma pessoa com idade entre 8 e 17 anos com 2 ou mais anos de idade acima da série
+	recomendada.
+
+		qtd_pes_E2: Número de pessoas no indicador E2, indicador esse que refere-se a quantas pessoas 
+	com idade entre 8 e 17 anos com 2 ou mais anos de idade acima da série recomendada.
+
+		qtd_dom_E3: Número de domicílios privados no indicador E3, indicador esse que refere-se a pelo
+	menos uma pessoa com 18 anos ou mais que não tenha completado o ensino médio.
+
+		qtd_pes_E3: Número de pessoas no indicador E3, indicador esse que refere-se quantas pessoas
+	com 18 anos ou mais que não tenha completado o ensino médio.
+
+		contr_E1: Contribuição do indicador E1 na composição do IPM.
+
+		contr_E2: Contribuição do indicador E2 na composição do IPM.
+
+		contr_E3: Contribuição do indicador E3 na composição do IPM.
+
+		num_idhm: Índice de Desenvolvimento Humano Municipal, usando indices de educação, riqueza, saude
+	entre outros, para seu cálculo. Seu intervalo é de 0 - 1.
+
+		num_ivs: Índice de Vulnerabilidade Social, composto por indicadores de renda. Pode ser caracterizado
+	pelos seguintes intevalos: 
+			0 - 0.2 Muito Baixo
+			0.2 - 0.3 Baixo
+			0.3 - 0.4 Média
+			0.4 - 0.5 Alto
+			0.5 - 1 Muito alto
+
+		num_ibeu: Índice de Bem Estar Urbano, tem como o objetivo mensurar as condições necessárias 
+	para se viver nas cidades, especialmente grandes centros urbanos. Variando de 0 - 1, sendo 0 a pior
+	situação possível.
+
+		sxraca: Sendo sexo e raça, podendo variar de 1 - 4, sendo 1 homem branco, 2 mulher branca,
+	3 homem negro, 4 mulher negra.
+
+
+
+
+

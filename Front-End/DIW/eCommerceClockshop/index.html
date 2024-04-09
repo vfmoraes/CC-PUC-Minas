@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clockshop</title>
+    <!--CSS do Bootstrap-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <!--Meu CSS-->
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body style="min-width: 372px;">
+    
+    <div class="bg-white">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-4">
+            <h6 class="my-auto">NOME: Victor Ferraz de Moraes</h6>
+          </div>
+          <div class="col-4">
+            <h6 class="my-auto">CURSO: Ciência da Computação</h6>
+          </div>
+          <div class="col-4">
+            <h6 class="my-auto">MATRÍCULA: 802371</h6></div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container text-white">
+        <a class="col-4 me-lg-2 col-lg-2" id="link-logo" href="index.html"><img class="img-fluid rounded-3" src="images/LogoIndie_resized.png" alt="Logo"></a>
+        <p class="mt-2 mb-1 mt-sm-0 d-none d-sm-block d-lg-none">Bem-vindo, Visitante!</p>
+        <div class="">
+          <button class="navbar-toggler bg-white align-top" type="button">
+            <span><i class="fa pt-1" style="font-size:25px">&#xf07a;</i>
+              <span class='badge badge-warning' id='lblCartCount'> 0 </span></span>
+          </button>
+          <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse mb-lg-3 mb-xl-0" id="navbarTogglerDemo02">
+        <div class="row">
+          <div class="col-xxl col-xl-6 col-lg-5 mt-md-auto my-auto">
+            <div class="row">
+              <p class="mb-0 mt-2 mt-lg-2 d-block d-sm-none d-lg-block">Bem-vindo, Visitante!</p>
+            </div>
+            <div class="row">
+              <form id="caixa-de-pesquisa" class="d-flex mt-2 mt-lg-3 mt-xxl-4" role="search">
+              <input
+                id="search-input"
+                class="form-control me-2"
+                type="search"
+                placeholder="Procure pelos melhores relógios do mercado!"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-light bg-black text-white" type="submit"><i id="lupa" class="fa-solid fa-magnifying-glass me-lg-1"></i><span class="d-none d-xl-inline ">Pesquisar</span></button>
+            </form>
+            </div>
+          </div>
+          <div class="col-xxl col-xl-6 col-lg-7">
+            <div class="row">
+              <ul id="cadastros" class="nav my-auto d-block mt-3 mt-lg-0 lh-lg d-lg-flex text-center">
+              <a class="nav-link" href="#"><li class="nav-item">Entrar</li></a>
+              <a class="nav-link" href="#"
+                ><li class="nav-item">Cadastrar</li></a
+              >
+              <a class="nav-link" href="#"
+                ><li class="nav-item">Minha Conta</li></a
+              >
+              <a class="nav-link" href="https://rastreamento.correios.com.br/app/index.php"
+                ><li class="nav-item">Rastrear Pedido</li></a
+              >
+              </ul>
+            </div>
+            <div class="row">
+              <div class="col-xxl col-xl-9 col-lg-9 pe-lg-0 my-auto d-none d-lg-block">
+                <ul id="informacoes" class="ps-0 mb-0 list-unstyled">
+                  <li class="mt-0">
+                    <p class="informacoes mb-0">Pagamento na Entrega | Reembolso em 30 dias</p>
+                    <p class="informacoes mb-0">Atendimento 24 horas <strong>1800 00 11 22</strong></p>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-5 col-xl-3 col-xxl-4 col-lg-3 my-auto d-none d-lg-block">
+                <ul class="list-unstyled mb-0">    
+                    <li id="carrinho" class="text-center rounded-3"><a href="#">
+                    <i class="fa pt-1" style="font-size:30px">&#xf07a;</i>
+                    <span class='badge badge-warning' id='lblCartCount'> 0 </span>
+                    <p class="text-uppercase mb-0" style="font-size: x-small;">Meu carrinho</p></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header class="mt-lg-3">
+      <div class="container">
+        <div class="row text-center justify-content-md-center mx-md-auto">
+          <div id="caixa-de-selecao" class="col-xxl-3 col-xl-3 col-lg-3 order-last order-lg-first mt-0 mt-lg-0 border border-dark border-1">
+            <h5 class="mt-3"><strong>Filtrar</strong></h5>
+            <p>Encontre o Relógio certo pelo preço certo!</p>
+            
+            <span><strong>Marca:</strong></span>
+            <select id="select-brand" class="form-select border border-dark" aria-label="Marca">
+              <option></option>
+            </select>
+            <span><strong>Gênero:</strong></span>
+            <select id="select-gender" class="form-select border border-dark" aria-label="Gênero">
+              <option></option>
+            </select>
+            <span><strong>Cor:</strong></span>
+            <select id="select-color" class="form-select border border-dark" aria-label="Cor">
+              <option></option>
+            </select>
+            <button id="pesquisa-filtro" class="btn btn-outline-dark bg-black text-white mt-2 mt-lg-1 mt-xl-5 mb-2 mt-2" type="submit"><i id="lupa" class="fa-solid fa-magnifying-glass"></i> Pesquisar</button>
+          </div>
+          <div id="carousel" class="col-xxl-9 col-xl-9 col-lg-9 px-0 px-lg-2">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <a href="#"><div class="carousel-item active" data-bs-interval="10000">
+                  <img src="images/Banner_Relogio1.png" class="d-block w-100" alt="Banner de Dia dos Namorados">
+                </div></a>
+                <a href="#"><div class="carousel-item" data-bs-interval="10000">
+                  <img src="images/Banner_Relogio2.jpg" class="d-block w-100" alt="Banner de Guia para comprar relógios">
+                </div></a>
+                <a href="#"><div class="carousel-item" data-bs-interval="10000">
+                  <img src="images/Banner_Relogio3.png" class="d-block w-100" alt="Banner de Coleção nova">
+                </div></a>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="row">
+          <div id="products-container" class="col-lg-9 col-12 mt-4"></div>
+          <div class="col-lg-3 col-12 mt-4">
+            <div class="p-2 mb-3 mt-1 mt-lg-0 border border-dark border-1" id="jogos-populares">
+              <div>
+                <h2 class="d-block d-sm-block d-md-block d-lg-none ms-1 mb-4">Relógios em tendência</h2>
+                <h5 class="d-none d-xxl-block ms-1 mb-4">Relógios em tendência</h5>
+                <h6 class="d-none d-xxl-none d-sm-none d-lg-block d-xl-block ms-1 mb-4">Relógios em tendência</h6>                
+              </div>  
+              <div id="relogios-avaliados"></div>
+              <div class="row my-4">
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-dark me-md-2" type="button">Ver Mais</button>
+              </div>
+              </div>
+            </div>
+            <div class="p-3 border border-dark border-1 mb-3" id="noticias">
+              <div class="row m-2">
+                <h2 class="d-none d-sm-block d-md-block d-lg-none p-0">Notícias</h2>
+                <h5 class="d-none d-xxl-block p-0">Notícias</h5>
+                <h6 class="d-xxl-none d-sm-none d-lg-block d-xl-block d-block p-0">Notícias</h6>
+                <p class="p-0">Se inscreva para ficar por dentro de notícias do site!</p>
+                <input type="email" placeholder="email@email.com" name="emaildenoticias" id="">
+              </div>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-dark me-md-2" type="button">Se Inscrever</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+    <footer class="bg-dark-subtle">
+      <div class="container">
+        <div id="informacoes" class="row py-5">
+          <div class="col-xxl-3 col-xl-3 col-lg-3 col-12">
+            <h6 class="mb-4">Métodos de Pagamento</h6>
+            <div class="col-xxl-5 col-xl-5 col-lg-5 text-lg-center">
+              <i class="fa fa-cc-amex" style="font-size:24px"></i>
+              <i class="fa fa-cc-diners-club" style="font-size:24px"></i>
+              <i class="fa fa-cc-discover" style="font-size:24px"></i>
+              <i class="fa fa-cc-jcb" style="font-size:24px"></i>
+              <i class="fa fa-cc-mastercard" style="font-size:24px"></i>
+              <i class="fa fa-cc-paypal" style="font-size:24px"></i>
+              <i class="fa fa-cc-stripe" style="font-size:24px"></i>
+              <i class="fa fa-cc-visa" style="font-size:24px"></i>
+              <i class="fa fa-credit-card" style="font-size:24px"></i>
+              <i class="fa fa-google-wallet" style="font-size:24px"></i>
+              <i class="fa fa-paypal" style="font-size:24px"></i>
+            </div>
+          </div>
+          <div class="col-xxl-3 col-xl-3 col-lg-3 col-12">
+            <h6 class="mb-4 mt-3 mt-lg-0">Links Rápidos</h6>
+            <ul class="ps-0" id="links-rapidos">
+              <li><a href="#">Ajuda</a></li>
+              <li><a href="#">Política de Entrega</a></li>
+              <li><a href="#">Cancelamentos e Reembolsos</a></li>
+              <li><a href="#">Perguntas Frequentes</a></li>
+              <li><a href="#">Política de Privacidade</a></li>
+              <li><a href="#">Avisos</a></li>
+            </ul>
+          </div>
+          <div class="col-xxl-3 col-xl-3 col-lg-3 col-12">
+            <h6 class="mb-4 mt-1 mt-lg-0">Redes Sociais</h6>
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-3 col-sm-2 d-flex justify-content-around">
+              <a href="#"><i class="fa fa-twitter" style="font-size:24px"></i></a>
+              <a href="#"><i class="fa fa-facebook" style="font-size:24px"></i></a>
+              <a href="#"><i class="fa fa-instagram" style="font-size:24px"></i></a>
+            </div>
+          </div>
+          <div class="col-xxl-3 col-xl-3 col-lg-3 col-12">
+            <h6 class="mb-4 mt-3 mt-lg-0">Fale Conosco</h6>
+            <ul class="ps-0 col-xxl-11 col-xl-11 col-lg-11">
+              <li>Rua Ficticia, 1</li>
+              <li>Bairro Inexistente - Cidade que não existe - MG</li>
+              <li>CEP: 99999-999</li>
+              <li><i class="fa-solid fa-square-envelope fa-lg me-1"></i><a href="mailto:indiegames@email.com">indiegames@email.com</a></li>
+              <li><i class="fa fa-phone me-1"></i>(31) 99999-9999</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="copyright" class="text-center bg-dark">
+        <p class="p-2 text-white m-0"><i class="fa fa-copyright pe-1"></i>2023 - 2023 clockshop.com</p>
+      </div>
+    </footer>
+    <!--Bootscrap JS-->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!--FontAwesome JS-->
+    <script src="https://kit.fontawesome.com/e9d38f7c47.js" crossorigin="anonymous"></script>
+    <!--Meus JS-->
+    <script src="js/index.js"></script>
+  </body>
+</html>

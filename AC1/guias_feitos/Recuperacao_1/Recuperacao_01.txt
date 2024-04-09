@@ -1,0 +1,53 @@
+Nome: Victor Ferraz de Moraes
+Curso: Ciência da Computação
+Matrícula: 802371
+
+Exercícios:
+01.) Dado o mapa de Veitch-Karnaugh:
+
+Determinar e implementar os circuitos equivalentes em Verilog e no Logisim:
+a.) expressão canônica para SoP(a,b,c,d)
+(a'b'cd) + (a'b'cd') + (a'bc'd') + (a'bc'd) + (abc'd) + (abcd) + (ab'cd) + (ab'cd')
+
+b.) expressão canônica para PoS(A,B,C,D)
+(A+B+C+D) * (A+B+C+D') * (A+B'+C'+D') * (A+B'+C'+D) * (A'+B'+C+D) * (A'+B'+C'+D) * (A'+B+C+D) * (A'+B+C+D') 
+
+c.) simplificação de mintermos por mapa de Veitch-Karnaugh
+(a'bc') + (abd) + (b'c)
+
+d.) simplificação de MAXTERMOS por mapa de Veitch-Karnaugh
+(B+C) * (A+B'+C') * (A'+B'+D)
+
+e.) expressão SoP equivalente com portas NAND (usar dupla negação)
+((a'bc')' * (abd)' * (b'c)')'
+
+f .) expressão PoS equivalente com portas NOR (usar dupla negação)
+((B+C)'+(A+B'+C')'+(A'+B'+D)')'
+
+04.) Dado o valor negativo, em complemento de 2, 357(8) , com um byte de representação
+
+a.) encontrar o positivo na base 2
+Convertendo Octal para Binário: 357(8) = 11101111(2)
+Para 11101111, inverter os bits = 00010000(2) e adicionar 1 = 00010001(2)
+Este é o positivo na base 2.
+
+b.) representar em um byte 4 vezes o valor do binário equivalente
+Multiplicamos o valor do binário por 4, que é equivalente a deslocar duas posições para a esquerda (2^2 = 4)
+Ou seja, 00010001(2) deslocado duas posições para a esquerda = 01000100(2).
+
+c.) representar em um byte o valor do binário equivalente dividido por 8
+Dividimos o valor do binário por 4, que é equivalente a deslocar 3 posições para a direita(2^3 = 8)
+Ou seja, 00010001(2) deslocado duas posições para a direita = 00000010(2).
+
+05.) Calcular a diferença, em binário, entre o hexadecimal C4 e o quaternário 1232 em um byte.
+
+Convertendo o hexacimal C4 para binário:
+C4(16) = 11000100(2)
+
+Convertendo 1232(4) para binário:
+1232(2) = 1101110(2)
+
+Realizando a subtração entre os binários:
+11000100(2) - 1101110(2) = 01010110(2)
+
+

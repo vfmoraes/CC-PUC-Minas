@@ -1,0 +1,35 @@
+Nome: Victor Ferraz de Moraes
+Matrícula: 802371
+
+4.) Diferenciar:
+
+PROM
+
+É um tipo de memória que pode ser programada usando um dispositivo de gravação especial. Esta programação é feita apenas uma vez. Após a PROM ser programada, os dados são permanentes e não podem ser apagados ou reprogramados
+
+Flexibilidade: Menos flexível, pois uma vez programado, os dados não podem ser alterados.
+
+Custo: Menor custo em comparação com PLA e PAL.
+
+Complexidade: Menos complexo em comparação com PLA e PAL.
+
+PLA
+
+É um dispositivo lógico programável que possui portas AND e OR programáveis. Todas as entradas e seus complementos estão disponíveis para cada porta AND, e a saída de cada porta AND é dada a cada porta OR. As conexões entre as portas AND e OR são programáveis.
+
+Flexibilidade: Mais flexível, pois as conexões entre as portas AND e OR são programáveis.
+
+Custo: Mais caro em comparação com PROM e PAL.
+
+Complexidade: Mais complexo devido à programabilidade das conexões entre as portas AND e OR.
+
+PAL
+
+É um dispositivo lógico programável, mas, ao contrário do PLA, possui portas AND programáveis e portas OR fixas. As portas AND estão sempre conectadas às portas OR, o que significa que o termo do produto produzido não é compartilhável com as funções de saída.
+
+Flexibilidade: Menos flexível em comparação com o PLA, pois as portas OR são fixas.
+
+Custo: Menor custo em comparação com PLA, mas mais caro que PROM.
+
+Complexidade: Menos complexo em comparação com o PLA, mas mais complexo que o PROM.
+

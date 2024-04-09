@@ -1,0 +1,143 @@
+Nome: Victor Ferraz de Moraes
+Matrícula: 802371
+
+01.) Fazer as conversões de decimal para binário:
+	
+    01a.) manualmente
+	
+	a.) 26(10) = 11010(2)
+		26/2 = 13/2 = 6/2 = 3/2 = 1/2
+		  0      1     0     1     1
+	Invertendo os restos de trás pra frente = 11010(2)
+
+	b.) 53(10) = 110101(2)
+		53/2 = 26/2 = 13/2 = 6/2 = 3/2 = 1/2
+                  1      0      1     0     1     1
+	Invertendo os restos de trás pra frente = 110101(2)
+
+	c.) 723(10) = 1011010011(2)
+		723/2 = 361/2 = 180/2 = 90/2 = 45/2 = 22/2 = 11/2 = 5/2 = 2/2 = 1/2
+                  1       1       0      0      1       0     1      1     0     1
+	Invertendo os restos de trás pra frente = 1011010011(2)
+
+	d.) 312(10) = 100111000(2)
+		312/2 = 156/2 = 78/2 = 39/2 = 19/2 = 9/2 = 4/2 = 2/2 = 1/2
+                   0      0       0      1      1     1     0     0     1
+	Invertendo os restos de trás pra frente = 100111000(2)
+
+	e.) 365(10) = 101101101(2)
+		365/2 = 182/2 = 91/2 = 45/2 = 22/2 = 11/2 = 5/2 = 2/2 = 1/2
+                   1      0       1      1      0     1      1     0     1
+	Invertendo os restos de trás pra frente = 101101101(2)
+
+02.) Fazer as conversões de binário para decimal:
+
+    02a.) manualmente
+	
+	a.) 10110(2) = 22(10)
+		1x2^4 + 0x2^3 + 1x2^2 + 1x2^1 + 0x2^0
+                  16  +   0   +   4   +   2   +   0
+				22(10)	
+	
+	b.) 11011(2) = 27(10)
+		1x2^4 + 1x2^3 + 0x2^2 + 1x2^1 + 1x2^0
+                  16  +   8   +   0   +   2   +   1
+				27(10)
+
+	c.) 100100(2) = 36(10)
+		1x2^5 + 0x2^4 + 0x2^3 + 1x2^2 + 0x2^1 + 0x2^0
+                  32  +   0   +   0   +   4   +   0   +   0
+				36(10)
+
+	d.) 101001(2) = 41(10)
+		1x2^5 + 0x2^4 + 1x2^3 + 0x2^2 + 0x2^1 + 1x2^0
+                  32  +   0   +   8   +   0   +   0   +   1
+				41(10)
+
+	e.) 110111(2) = 55(10)
+		1x2^5 + 1x2^4 + 0x2^3 + 1x2^2 + 1x2^1 + 1x2^0
+                  32  +   16  +   0   +   4   +   2   +   1
+				55(10)
+
+03.) Fazer as conversões de decimal para a base indicada:
+
+    03a.) manualmente
+
+	a.) 61(10) = 331(4)
+		61/4 = 15/4 = 3/4
+                  1      3     3
+	Invertendo os restos de trás pra frente = 331(4)
+
+	b.) 54(10) = 66(8)
+		54/8 = 	6/8
+                  6      6
+	Invertendo os restos de trás pra frente = 66(8)
+
+	c.) 77(10) = 4D(16)
+		77/16 = 4/16	
+                D(13)     4
+	Invertendo os restos de trás pra frente = 4D(16)
+
+	d.) 151(10) = 97(16)
+		151/16 = 9/16
+                   7      9
+	Invertendo os restos de trás pra frente = 97(16)
+
+	e.) 738(10) = 2E2(16)
+		738/16 = 46/16 = 2/16
+                   2     E(14)    2
+	Invertendo os restos de trás pra frente = 2E2(16)
+
+04.) Fazer as conversões de base entre as bases indicadas por agrupamento:
+
+    04a.) manualmente
+
+	a.) 10101(2) = 111(4)
+		[01] [01] [01] = 111(4)
+                  1    1    1
+
+	b.) 11010(2) = 32(8)
+		[011] [010] = 32(8)
+                  3     2
+
+	c.) 100111(2) = 27(16)
+		[0010] [0111] = 27(16)
+                   2      7
+
+	d.) 101001(2) = 51(8)
+		[101] [001] = 51(8)
+                  5     1
+
+	e.) 101101(2) = 231(4)
+		[10] [11] [01] = 231(4)
+		  2    3    1
+
+05.) Converter entre símbolos e códigos de representação alfanumérico (ASCII):
+
+    05a.) manualmente
+
+	a.) “PUC-Minas” = 50 55 43 2D 4D 69 6E 61 73(16_ASCII)
+
+	b.) “2023-02” = 32 30 32 33 2D 30 32(16_ASCII)
+
+	c.) “Belo Horizonte" = 0100 0010 0110 0101 0110 1100 0110 1111 0010 0000 0100 1000 0110 1111 0111 0010 0110 1001 0111 1010 0110 1111 0110 1110 0111 0100 0110 0101(2_ASCII)
+
+	d.) 116 157 151 164 145 (8) = 78 111 105 116 101 (10) = Noite(ASCII)
+		Convertendo para base 10 cada número:
+
+		116(8) = 1x8^2 + 1x8^1 + 6x8^0 = 78(10)
+		           64  +   8   +   6
+
+		157(8) = 1x8^2 + 5x8^1 + 7x8^0 = 111(10)
+			   64  +  40   +   7
+
+		151(8) = 1x8^2 + 5x8^1 + 1x8^0 = 105(10)
+			   64  +  40   +   1
+
+		164(8) = 1x8^2 + 6x8^1 + 4x8^0 = 116(10)
+			   64  +  48   +   4
+
+		145(8) = 1x8^2 + 4x8^1 + 5x8^0 = 101(10)
+			   64  +  32   +   5
+
+	e.) 4D 2E 20 47 2E (16) = M. G.(ASCII)

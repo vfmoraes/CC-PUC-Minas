@@ -1,0 +1,23 @@
+// Guia_1601.txt
+// 802371 - Victor Ferraz de Moraes
+//
+
+MVI C, 00H
+LXI H, 2050H
+LDA H
+MOV B, A
+LDA 2051H
+MOV A, C
+
+BACK: 
+    ADD B
+    JC NEXT
+    INX H
+NEXT: 
+    DCR A
+    JNZ BACK
+
+SHLD 2052H
+HLT
+
+

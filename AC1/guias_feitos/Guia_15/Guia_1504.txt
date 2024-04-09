@@ -1,0 +1,21 @@
+// Guia_1504.txt
+// 802371 - Victor Ferraz de Moraes
+
+# ORG 2000H
+# BEGIN 2000H
+
+LDA 2501
+MOV B, A
+LDA 2502
+ADD A
+ADD A
+SUB B
+MOV B, A
+LDA 2503
+MUL B
+STA 2504
+HLT
+
+# ORG 2501H
+
+# DB 0AH, 05H
