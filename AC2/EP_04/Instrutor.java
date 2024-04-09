@@ -13,12 +13,22 @@ import java.io.*;
 public class Instrutor {
   public static void main(String[] args) {
 
+    //Limpa o arquivo testeula.hex antes da execução
+    try{
+      RandomAccessFile rf = new RandomAccessFile("testeula.hex", "rw");
+      rf.setLength(0);
+      rf.close();
+    } catch(Exception e){
+      e.printStackTrace();
+    }
+
     //Variáveis para armazenar os valores de X, Y e W
     String x = " ", y = " ", w = " ";
 
     try {
       //Lendo do arquivo testeula.ula
       File arquivo = new File("testeula.ula");
+      FileWriter escreverArquivo = new FileWriter("testeula.hex", true);
       Scanner sc = new Scanner(arquivo);
       //Enquanto houver linhas no arquivo, lê a linha
       while (sc.hasNextLine()) {
@@ -34,6 +44,7 @@ public class Instrutor {
         }
         if(linha.contains("W=")){
           w = linha.substring(2, 3);
+          System.out.println("W = " + linha.substring(2));
           //Dependendo do Mnemônico, atribui a W a instrução correspondente, que vai de 0 a F
           if(linha.contains("nB")){
             w = "0";
@@ -91,20 +102,19 @@ public class Instrutor {
           System.out.println("W = " + w);
           System.out.println("Instrução: " + x + y + w);
           //Escreve no arquivo testeula.hex uma linha contendo X, Y e W, formando a instrução
-          try {
-            FileWriter escreverArquivo = new FileWriter("testeula.hex", true);
-            escreverArquivo.write(x + y + w + "\n");
-            escreverArquivo.close();
-          } catch (IOException e) {
-            e.printStackTrace();
-          }
+          escreverArquivo.write(x + y + w + "\n");
         }
       }
-      //Fecha o Scanner
+      //Escreve o fim do arquivo .hex
+      escreverArquivo.write("fim");
+      //Fecha o Scanner e Arquivo de escrita
+      escreverArquivo.close();
       sc.close();
     } catch (FileNotFoundException e) {
       e.printStackTrace();
-    } 
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   
   
   }
