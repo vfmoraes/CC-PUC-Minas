@@ -2,9 +2,9 @@
 /*
 EP_04 - Leitura de instruções de um arquivo .ula e geração de um arquivo hexadecimal
 Membros do grupo:
-- Luís Augusto Lima de Oliveira
-- Samuel Horta de Faria
-- Victor Ferraz de Moraes
+- Luís Augusto Lima de Oliveira (805413)
+- Samuel Horta de Faria (801528)
+- Victor Ferraz de Moraes (802371)
 
 Criação: 09/04/2024
  */
