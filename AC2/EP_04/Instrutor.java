@@ -1,3 +1,4 @@
+
 /*
 EP_04 - Leitura de instruções de um arquivo .ula e geração de um arquivo hexadecimal
 Membros do grupo:
@@ -6,108 +7,97 @@ Membros do grupo:
 - Victor Ferraz de Moraes
 
 Criação: 09/04/2024
- */ 
+ */
 import java.util.*;
 import java.io.*;
 
 public class Instrutor {
   public static void main(String[] args) {
 
-    //Limpa o arquivo testeula.hex antes da execução
-    try{
+    // Limpa o arquivo testeula.hex antes da execução
+    try {
       RandomAccessFile rf = new RandomAccessFile("testeula.hex", "rw");
       rf.setLength(0);
       rf.close();
-    } catch(Exception e){
+    } catch (Exception e) {
       e.printStackTrace();
     }
 
-    //Variáveis para armazenar os valores de X, Y e W
+    // Variáveis para armazenar os valores de X, Y e W
     String x = " ", y = " ", w = " ";
 
     try {
-      //Lendo do arquivo testeula.ula
+      // Lendo do arquivo testeula.ula
       File arquivo = new File("testeula.ula");
       FileWriter escreverArquivo = new FileWriter("testeula.hex", true);
       Scanner sc = new Scanner(arquivo);
-      //Enquanto houver linhas no arquivo, lê a linha
+      // Enquanto houver linhas no arquivo, lê a linha
       while (sc.hasNextLine()) {
         String linha = sc.nextLine();
-        //Ler a linha, se for X, Y ou W, atribui a variável correspondente
-        if(linha.contains("X=")){
+        // Ler a linha, se for X, Y ou W, atribui a variável correspondente
+        if (linha.contains("X=")) {
           x = linha.substring(2, 3);
           System.out.println("X = " + x);
         }
-        if(linha.contains("Y=")){
+        if (linha.contains("Y=")) {
           y = linha.substring(2, 3);
           System.out.println("Y = " + y);
         }
-        if(linha.contains("W=")){
-          w = linha.substring(2, 3);
-          System.out.println("W = " + linha.substring(2));
-          //Dependendo do Mnemônico, atribui a W a instrução correspondente, que vai de 0 a F
-          if(linha.contains("nB")){
+        if (linha.contains("W=")) {
+          // Obtém a parte da linha após "W="
+          String instrucao = linha.substring(2, linha.length()-1).trim(); // Utilizando trim() para remover espaços em branco antes e depois, além de não armazenar o ;
+          System.out.println("W = " + instrucao);
+
+          // Comparando instrucao diretamente com os mnemônicos
+
+          if (instrucao.equals("nB")) {
             w = "0";
-          }
-          else if(linha.contains("nAeBn")){
+          } else if (instrucao.equals("nAeBn")) {
             w = "1";
-          }
-          else if(linha.contains("nAeB")){
+          } else if (instrucao.equals("nAeB")) {
             w = "2";
-          }
-          else if(linha.contains("Lzero")){
+          } else if (instrucao.equals("Lzero")) {
             w = "3";
-          }
-          else if(linha.contains("AeBn")){
+          } else if (instrucao.equals("AeBn")) {
             w = "4";
-          }
-          else if(linha.contains("nA")){
+          } else if (instrucao.equals("nA")) {
             w = "5";
-          }
-          else if(linha.contains("AxB")){
+          } else if (instrucao.equals("AxB")) {
             w = "6";
-          }
-          else if(linha.contains("AenB")){
+          } else if (instrucao.equals("AenB")) {
             w = "7";
-          }
-          else if(linha.contains("nAonB")){
+          } else if (instrucao.equals("nAonB")) {
             w = "8";
-          }
-          else if(linha.contains("nAxnB")){
+          } else if (instrucao.equals("nAxnB")) {
             w = "9";
-          }
-          else if(linha.contains("Bcopia")){
+          } else if (instrucao.equals("Bcopia")) {
             w = "A";
-          }
-          else if(linha.contains("AeB")){
+          } else if (instrucao.equals("AeB")) {
             w = "B";
-          }
-          else if(linha.contains("Lum")){
+          } else if (instrucao.equals("Lum")) {
             w = "C";
-          }
-          else if(linha.contains("AonB")){
+          } else if (instrucao.equals("AonB")) {
             w = "D";
-          }
-          else if(linha.contains("AoB")){
+          } else if (instrucao.equals("AoB")) {
             w = "E";
-          }
-          else if(linha.contains("Acopia")){
+          } else if (instrucao.equals("Acopia")) {
             w = "F";
-          }
-          else {
-            //Nenhuma instrução encontrada
+          } else {
+            // Nenhuma instrução encontrada
             System.out.println("Instrução inválida");
           }
-          //Imprime o valor de W e a instrução
+
+          // Imprime o valor de W e a instrução
           System.out.println("W = " + w);
           System.out.println("Instrução: " + x + y + w);
-          //Escreve no arquivo testeula.hex uma linha contendo X, Y e W, formando a instrução
+          // Escreve no arquivo testeula.hex uma linha contendo X, Y e W, formando a
+          // instrução
           escreverArquivo.write(x + y + w + "\n");
         }
       }
-      //Escreve o fim do arquivo .hex
+      // Escreve o fim do arquivo .hex
       escreverArquivo.write("fim");
-      //Fecha o Scanner e Arquivo de escrita
+      // Fecha o Scanner e Arquivo de escrita
       escreverArquivo.close();
       sc.close();
     } catch (FileNotFoundException e) {
@@ -115,7 +105,6 @@ public class Instrutor {
     } catch (IOException e) {
       e.printStackTrace();
     }
-  
-  
+
   }
 }
