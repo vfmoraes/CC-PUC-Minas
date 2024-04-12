@@ -62,13 +62,13 @@ public class Instrutor {
             w = "4";
           } else if (instrucao.equals("nA")) {
             w = "5";
-          } else if (instrucao.equals("AxB")) {
+          } else if (instrucao.equals("AXB")) {
             w = "6";
           } else if (instrucao.equals("AenB")) {
             w = "7";
           } else if (instrucao.equals("nAonB")) {
             w = "8";
-          } else if (instrucao.equals("nAxnB")) {
+          } else if (instrucao.equals("nAXnB")) {
             w = "9";
           } else if (instrucao.equals("Bcopia")) {
             w = "A";
