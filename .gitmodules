@@ -14,3 +14,6 @@
 	path = AEEDs3/TP_4_AEDs_III
 	url = https://github.com/vfmoraes/TP_4_AEDs_III.git
 	branch = main
+[submodule "Grafos"]
+	path = Grafos
+	url = https://github.com/LuisAugusto0/Grafos.git
