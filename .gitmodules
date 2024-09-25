@@ -17,3 +17,6 @@
 [submodule "Grafos"]
 	path = Grafos
 	url = https://github.com/LuisAugusto0/Grafos.git
+[submodule "Vamo-Rachar"]
+	path = Vamo-Rachar
+	url = https://github.com/LuisAugusto0/Vamo-Rachar
