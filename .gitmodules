@@ -17,15 +17,19 @@
 [submodule "Grafos"]
 	path = Grafos
 	url = https://github.com/LuisAugusto0/Grafos.git
+	branch = main
 [submodule "Vamo-Rachar"]
-	path = Vamo-Rachar
+	path = LDDM/Vamo-Rachar
 	url = https://github.com/LuisAugusto0/Vamo-Rachar
+	branch = main
 [submodule "TI4/TI-4_Bakumatsu_The_Last_Blade"]
 	path = TI4/TI-4_Bakumatsu_The_Last_Blade
 	url = https://github.com/LuisAugusto0/TI-4_Bakumatsu_The_Last_Blade.git
 [submodule "MindMate"]
-	path = MindMate
+	path = TI1/MindMate
 	url = https://github.com/vfmoraes/MindMate.git
+	branch = main
 [submodule "HyperFantasy"]
-	path = HyperFantasy
+	path = TI2/HyperFantasy
 	url = https://github.com/vfmoraes/HyperFantasy.git
+	branch = main
