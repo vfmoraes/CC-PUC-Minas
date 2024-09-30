@@ -21,3 +21,12 @@
 [submodule "TI4/TI-4_Bakumatsu_The_Last_Blade"]
 	path = TI4/TI-4_Bakumatsu_The_Last_Blade
 	url = https://github.com/LuisAugusto0/TI-4_Bakumatsu_The_Last_Blade.git
+[submodule "TI1/MindMate"]
+	path = TI1/MindMate
+	url = https://github.com/vfmoraes/MindMate.git
+[submodule "TI2/HyperFantasy"]
+	path = TI2/HyperFantasy
+	url = https://github.com/vfmoraes/HyperFantasy.git
+[submodule "LDDM/Vamo-Rachar"]
+	path = LDDM/Vamo-Rachar
+	url = https://github.com/LuisAugusto0/Vamo-Rachar.git
