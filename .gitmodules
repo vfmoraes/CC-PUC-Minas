@@ -14,10 +14,6 @@
 	path = AEEDs3/TP_4_AEDs_III
 	url = https://github.com/vfmoraes/TP_4_AEDs_III.git
 	branch = main
-[submodule "Grafos"]
-	path = Grafos
-	url = https://github.com/LuisAugusto0/Grafos.git
-	branch = main
 [submodule "TI4/TI-4_Bakumatsu_The_Last_Blade"]
 	path = TI4/TI-4_Bakumatsu_The_Last_Blade
 	url = https://github.com/LuisAugusto0/TI-4_Bakumatsu_The_Last_Blade.git
