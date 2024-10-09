@@ -26,6 +26,3 @@
 [submodule "LDDM/Vamo-Rachar"]
 	path = LDDM/Vamo-Rachar
 	url = https://github.com/LuisAugusto0/Vamo-Rachar.git
-[submodule "Grafos"]
-	path = Grafos
-	url = https://github.com/LuisAugusto0/Grafos.git
