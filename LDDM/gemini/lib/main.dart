@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
       return;
     }
 
-    final apiKey = 'API_KEY';
+    final apiKey = 'AIzaSyDWm6pxL0QzX_yo2Roskdv2eZZUtomoxss';
     if (apiKey == null) {
       print('No \$API_KEY environment variable');
       exit(1);
@@ -62,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     final model = GenerativeModel(model: 'gemini-1.5-flash', apiKey: apiKey);
     final image = await _selectedImage!.readAsBytes();
-    final prompt = TextPart("Transcreva a nota fiscal, listando todos os produtos e seus respectivos preços, faça separado em ; para ser usado como um split para separar as informações, apenas respostas sem comentários do GEMINI AI por favor");
+    final prompt = TextPart("Transcreva a nota fiscal, listando todos os produtos, seus respectivos preços (separar a parte inteira da decimal por ponto) e a quantidade individual de cada produto, faça separado em ; para ser usado como um split para separar as informações. Separe cada conjunto de informações em uma linha diferente. Caso a quantidade seja um valor decimal, considere o valor inteiro do teto. Siga o seguinte modelo para cada produto: Nome;Quantidade;Preço, apenas respostas sem comentários do GEMINI AI por favor");
 
     final imageParts = [
       DataPart('image/jpeg', image)
@@ -70,7 +70,13 @@ class _MyHomePageState extends State<MyHomePage> {
     final response = await model.generateContent([
       Content.multi([prompt, ...imageParts])
     ]);
-    print(response.text);
+    //print(response.text);
+    List<String?> produtos = [];
+    produtos.add(response.text);
+
+    for(int i = 0; i < produtos.length; i++){
+      debugPrint(produtos[i]);
+    }
   }
 
   @override
