@@ -36,16 +36,47 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   File? _selectedImage;
 
-  // Função para selecionar a imagem da galeria
-  Future<void> _pickImage() async {
+  // Função para selecionar uma imagem da galeria ou tirar uma foto
+  Future<void> _chooseImageSource() async {
     final ImagePicker picker = ImagePicker();
-    final XFile? image = await picker.pickImage(source: ImageSource.gallery);
 
-    if (image != null) {
-      setState(() {
-        _selectedImage = File(image.path);
-      });
-    }
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return SafeArea(
+          child: Wrap(
+            children: <Widget>[
+              ListTile(
+                leading: const Icon(Icons.photo_library),
+                title: const Text('Galeria'),
+                onTap: () async {
+                  final XFile? image = await picker.pickImage(source: ImageSource.gallery);
+                  if (image != null) {
+                    setState(() {
+                      _selectedImage = File(image.path);
+                    });
+                  }
+                  Navigator.of(context).pop();
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.camera_alt),
+                title: const Text('Câmera'),
+                onTap: () async {
+                  final XFile? image = await picker.pickImage(source: ImageSource.camera);
+                  if (image != null) {
+                    setState(() {
+                      _selectedImage = File(image.path);
+                    });
+                  }
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          ),
+        );
+      },
+    );
   }
 
   // Função para enviar a imagem para a IA
@@ -54,8 +85,8 @@ class _MyHomePageState extends State<MyHomePage> {
       return;
     }
 
-    final apiKey = 'AIzaSyDWm6pxL0QzX_yo2Roskdv2eZZUtomoxss';
-    if (apiKey == null) {
+    final apiKey = 'API_KEY';
+    if (apiKey.isEmpty) {
       print('No \$API_KEY environment variable');
       exit(1);
     }
@@ -70,11 +101,10 @@ class _MyHomePageState extends State<MyHomePage> {
     final response = await model.generateContent([
       Content.multi([prompt, ...imageParts])
     ]);
-    //print(response.text);
     List<String?> produtos = [];
     produtos.add(response.text);
 
-    for(int i = 0; i < produtos.length; i++){
+    for (int i = 0; i < produtos.length; i++) {
       debugPrint(produtos[i]);
     }
   }
@@ -95,8 +125,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 : Image.file(_selectedImage!),
             const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: _pickImage,
-              child: const Text('Selecionar Imagem'),
+              onPressed: _chooseImageSource,
+              child: const Text('Selecionar/Tirar Foto'),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
