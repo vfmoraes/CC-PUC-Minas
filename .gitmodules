@@ -23,9 +23,6 @@
 [submodule "TI2/HyperFantasy"]
 	path = TI2/HyperFantasy
 	url = https://github.com/vfmoraes/HyperFantasy.git
-[submodule "LDDM/Vamo-Rachar"]
-	path = LDDM/Vamo-Rachar
-	url = https://github.com/LuisAugusto0/Vamo-Rachar.git
 [submodule "Grafos/Implementacoes_Grafos"]
 	path = Grafos/Implementacoes_Grafos
 	url = https://github.com/vfmoraes/Implementacoes_Grafos.git
