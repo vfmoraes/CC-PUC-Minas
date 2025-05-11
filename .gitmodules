@@ -30,3 +30,12 @@
 	path = LDDM/Vamo-Rachar
 	url = https://github.com/LuisAugusto0/Vamo-Rachar
 	branch = main
+[submodule "PAA/graph-bridge"]
+	path = PAA/graph-bridge
+	url = https://github.com/mouroz/graph-bridge
+[submodule "AC3/cache-mem-analysis"]
+	path = AC3/cache-mem-analysis
+	url = https://github.com/mouroz/cache-mem-analysis
+[submodule "ES2/PizzaRush"]
+	path = ES2/PizzaRush
+	url = https://github.com/Mateus-Fernandes-Barbosa/PizzaRush
