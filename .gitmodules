@@ -39,3 +39,9 @@
 [submodule "ES2/PizzaRush"]
 	path = ES2/PizzaRush
 	url = https://github.com/Mateus-Fernandes-Barbosa/PizzaRush
+[submodule "TI5/plmg-cc-ti5-2025-1-g09-heatsync"]
+	path = TI5/plmg-cc-ti5-2025-1-g09-heatsync
+	url = https://github.com/ICEI-PUC-Minas-CC-TI/plmg-cc-ti5-2025-1-g09-heatsync.git
+[submodule "TI5/ti5-graph"]
+	path = TI5/ti5-graph
+	url = https://github.com/LuisAugusto0/ti5-graph.git
